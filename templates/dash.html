@@ -1,0 +1,8 @@
+{% extends 'block/base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    {% include 'block/nav.html' %}
+    <main class="container-fluid">
+        <h3>User: {{ user.username }}</h3>
+    </main>
+{% endblock %}
