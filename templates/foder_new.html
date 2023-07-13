@@ -1,0 +1,16 @@
+{% extends 'block/base.html' %}
+{% block title %}File edit{% endblock %}
+{% block content %}
+    <h1>File edit</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="new" name="status">
+        <div class="form-outline mb-4">
+            <label class="form-label" for="from-file-name">Folder name</label>
+            <input type="text" id="from-file-name" name="name" placeholder="name" class="form-control"/>
+        </div>
+
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}
+```
