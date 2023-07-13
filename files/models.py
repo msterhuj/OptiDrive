@@ -14,10 +14,11 @@ class Items(models.Model):
     is_deleted = models.BooleanField(default=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     shared_with = models.ManyToManyField(User, related_name='shared_with', blank=True)
+    global_shared = models.BooleanField(default=False)
 
     def is_root(self):
         """
-        Its a root folder if it has no parent.
+        It's a root folder if it has no parent.
         """
         return not self.parent
 
