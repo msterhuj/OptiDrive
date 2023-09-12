@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^4.2.3"
+rich = "^13.4.2"
+minio = "^7.1.15"
 
 
 [build-system]
